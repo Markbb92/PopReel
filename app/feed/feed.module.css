@@ -1,0 +1,50 @@
+.feedContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+    scroll-snap-type: y mandatory;  /* Keeps smooth scrolling */
+}
+
+/* ✅ Each video should take up the full screen */
+.videoWrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;  /* Each video fills the screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 🔥 Sidebar-style buttons (Like, Comment, Share) */
+.overlay {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    color: white;
+}
+
+.actions {
+    position: absolute;
+    right: 5%;
+    bottom: 15%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.actions button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
